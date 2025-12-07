@@ -11,9 +11,16 @@ A comprehensive collection of Claude Code skills for document generation, stylin
 
 ## New to This? Start Here!
 
+### 📚 Documentation for Everyone
+
+- **[BEGINNER-GUIDE.md](BEGINNER-GUIDE.md)** - 🌟 **START HERE!** Complete beginner-friendly guide explaining all 16 skills with examples
+- **[QUICK-REFERENCE.md](QUICK-REFERENCE.md)** - One-page cheat sheet for common tasks
+
+### ⚡ Quick Setup
+
 **Don't want to read documentation?** Just copy-paste prompts directly into Claude Code!
 
-### One-Line Setup
+#### One-Line Setup
 
 Open Claude Code anywhere and paste this:
 
@@ -21,11 +28,71 @@ Open Claude Code anywhere and paste this:
 Clone https://github.com/promptadvisers/claude-code-polished-documents-skills and set it up for me - install the Python environment, copy skills to ~/.claude/skills/, and test it works.
 ```
 
-### More Prompts
+#### More Prompts
 
 See the **[quick-start/](quick-start/)** folder for:
 - [QUICK-START.md](quick-start/QUICK-START.md) - Step-by-step prompts for setup
 - [PROMPTS.md](quick-start/PROMPTS.md) - Copy-paste prompts for every use case
+
+---
+
+## Web Application
+
+This repository includes a **full-stack web application** that provides a modern interface for all document manipulation skills.
+
+### Technology Stack
+
+- **Frontend**: Next.js 16 with App Router, React 19, TypeScript, Tailwind CSS 4
+- **Backend**: FastAPI (Python), providing REST APIs for all document operations
+- **Architecture**: Separate frontend/backend with CORS-enabled communication
+
+### Quick Start (Web App)
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/claude-code-polished-documents-skills.git
+cd claude-code-polished-documents-skills
+
+# 2. Set up Python backend
+cd frontend/python-backend
+python -m venv venv
+source venv/bin/activate  # Windows: .\venv\Scripts\activate
+pip install -r requirements.txt
+
+# 3. Configure environment variables
+cp .env.example .env
+# Edit .env and add your API keys (ANTHROPIC_API_KEY, FIRECRAWL_API_KEY, etc.)
+
+# 4. Start the backend (port 8000)
+python main.py
+
+# 5. In a new terminal, start the frontend (port 3010)
+cd frontend
+npm install
+npm run dev
+```
+
+Visit [http://localhost:3010](http://localhost:3010) to access the web application.
+
+### Environment Configuration
+
+The backend uses a `.env` file for configuration. Required variables:
+
+```bash
+# AI API Keys
+ANTHROPIC_API_KEY=sk-ant-your-key-here
+OPENAI_API_KEY=sk-your-key-here  # Optional
+
+# Document Processing
+FIRECRAWL_API_KEY=fc-your-key-here
+
+# Server Settings
+PORT=8000
+HOST=0.0.0.0
+FRONTEND_URL=http://localhost:3010
+```
+
+See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed setup instructions.
 
 ---
 
@@ -291,9 +358,9 @@ Use FireCrawl to extract branding from https://company.com and add it as a new b
 
 The skill uses cross-platform fonts (Arial, Calibri, Georgia, Segoe UI) that work on both Mac and Windows. If fonts appear different:
 
-1. Ensure the document is opened in Microsoft Word (not Preview or other viewers)
+1. Ensure the document is opened in a proper DOCX viewer (Microsoft Word, LibreOffice Writer, or Google Docs - not Preview or basic text viewers)
 2. Check that the specified fonts are installed on your system
-3. Word may substitute fonts in Compatibility Mode
+3. Word/LibreOffice may substitute fonts in Compatibility Mode
 
 ### python-docx Not Found
 
