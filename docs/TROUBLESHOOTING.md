@@ -5,11 +5,47 @@ Common issues and solutions for the Claude Code Skills Collection.
 ## Table of Contents
 
 - [Installation Issues](#installation-issues)
+- [Viewing Documents](#viewing-documents)
 - [Document Polisher Issues](#document-polisher-issues)
 - [Font Problems](#font-problems)
 - [MCP Server Issues](#mcp-server-issues)
 - [Permission Errors](#permission-errors)
 - [Python Environment Issues](#python-environment-issues)
+
+---
+
+## Viewing Documents
+
+### How to Open Styled DOCX Files
+
+**Recommended Options** (in order of preference):
+
+1. **LibreOffice Writer** (Free & Best Compatibility)
+   - Download: https://www.libreoffice.org/
+   - Cross-platform (Windows, Mac, Linux)
+   - Excellent DOCX format support
+   - Preserves all styling and formatting
+   - Open files: Right-click → Open With → LibreOffice Writer
+
+2. **Microsoft Word** (Paid)
+   - Desktop application (Office 365 or standalone)
+   - Perfect format compatibility
+   - All features supported
+
+3. **Google Docs** (Free, Web-based)
+   - Upload to https://docs.google.com/
+   - Good formatting preservation
+   - Can edit and download back as DOCX
+
+4. **Microsoft Word Online** (Free, Web-based)
+   - Go to https://office.com
+   - Upload and view DOCX files
+   - Limited features but free
+
+**Avoid These Viewers**:
+- ❌ **WordPad** - Limited formatting support, styles won't display correctly
+- ❌ **macOS Preview** - Basic viewer, doesn't show proper styling
+- ❌ **Basic text editors** - Will show raw XML instead of formatted document
 
 ---
 
@@ -127,7 +163,7 @@ Common issues and solutions for the Claude Code Skills Collection.
 
 **Symptom**: Document shows Calibri when it should show Arial/Georgia
 
-**Cause**: Font substitution by Word when specified font isn't installed
+**Cause**: Font substitution by Word/LibreOffice when specified font isn't installed
 
 **Solutions**:
 
@@ -140,15 +176,16 @@ Common issues and solutions for the Claude Code Skills Collection.
 
 2. **Check font availability**:
    - Open Font Book (macOS) or Fonts folder (Windows)
+   - In LibreOffice: Tools → Options → Fonts
    - Search for the specified font
 
 3. **Install missing fonts**:
    - Download from Google Fonts or official sources
    - Install system-wide
 
-4. **Check Word's Compatibility Mode**:
-   - File → Info → Check for "Compatibility Mode"
-   - Convert to latest format if needed
+4. **Check Compatibility Mode**:
+   - **Microsoft Word**: File → Info → Check for "Compatibility Mode", convert to latest format if needed
+   - **LibreOffice**: No compatibility mode issues - native DOCX support
 
 ### Fonts Look Different on Mac vs Windows
 
