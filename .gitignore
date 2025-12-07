@@ -116,3 +116,6 @@ Thumbs.db
 # FireCrawl MCP Server (use npm install to regenerate)
 # -----------------------------------------------------------------------------
 firecrawl-mcp-server/node_modules/
+.next/
+nul
+next-env.d.ts
