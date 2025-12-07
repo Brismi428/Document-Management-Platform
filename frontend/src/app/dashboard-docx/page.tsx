@@ -171,7 +171,7 @@ export default function DocxCreatorPage() {
                 DOCX Creator
               </h1>
               <p style={{ color: "#6b7280", margin: "0.5rem 0 0 0", fontSize: "0.95rem" }}>
-                Create professional Word documents with templates
+                Create professional documents with templates
               </p>
             </div>
           </div>

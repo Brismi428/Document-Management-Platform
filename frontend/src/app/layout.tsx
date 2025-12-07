@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
-  title: "Document Polisher - Transform Documents with Premium Brand Styling",
-  description: "Transform your documents with 10 premium brand styles including McKinsey, Apple, Stripe, and more.",
+  title: "Document Management Platform - AI-Powered Document Creation",
+  description: "Create, edit, and style DOCX, PDF, XLSX, and PPTX files with AI assistance. Professional templates and premium brand styling.",
 };
 
 export default function RootLayout({
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );

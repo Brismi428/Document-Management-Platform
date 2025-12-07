@@ -152,7 +152,7 @@ export default function SpreadsheetCreatorPage() {
             📊 Spreadsheet Creator
           </h1>
           <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "1.1rem" }}>
-            Build Excel spreadsheets with formulas, formatting, and financial models
+            Build spreadsheets with formulas, formatting, and financial models
           </p>
         </div>
 
